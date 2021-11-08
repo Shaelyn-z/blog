@@ -2,7 +2,7 @@
 home: true
 heroImage: /cat.jpg
 actionText: 走着 →
-actionLink: /guide/getting-started.html
+actionLink: /basics/frond.html
 # footer: ...
 ---
 
