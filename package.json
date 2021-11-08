@@ -7,7 +7,7 @@
   "author": "shaelyn",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
