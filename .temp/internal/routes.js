@@ -9,6 +9,14 @@ import GlobalLayout from "D:\\code\\shaelynblog.github.io\\node_modules\\@vuepre
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-a685ad72",
+    path: "/basics/websecure.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-a685ad72").then(next)
+    },
+  },
+  {
     name: "v-3a110e4b",
     path: "/",
     component: GlobalLayout,
@@ -21,14 +29,6 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-1a9390ab",
-    path: "/basics/frond.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
-    },
-  },
-  {
     name: "v-371a8c24",
     path: "/bug/",
     component: GlobalLayout,
@@ -39,6 +39,14 @@ export const routes = [
   {
     path: "/bug/index.html",
     redirect: "/bug/"
+  },
+  {
+    name: "v-1a9390ab",
+    path: "/basics/frond.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
+    },
   },
   {
     name: "v-7bb0d2a9",
@@ -73,14 +81,6 @@ export const routes = [
     },
   },
   {
-    name: "v-357874e3",
-    path: "/fun/htmlcss.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-357874e3").then(next)
-    },
-  },
-  {
     name: "v-42dcb8fb",
     path: "/talk/outsourcers.html",
     component: GlobalLayout,
@@ -99,6 +99,14 @@ export const routes = [
   {
     path: "/talk/index.html",
     redirect: "/talk/"
+  },
+  {
+    name: "v-357874e3",
+    path: "/fun/htmlcss.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-357874e3").then(next)
+    },
   },
   {
     path: '*',

@@ -28,7 +28,8 @@ module.exports = {
     ],
     sidebar: {
       '/basics/': getSidebar('基本功', [
-        'frond'
+        'frond',
+        'websecure'
       ]),
       '/bug/': getSidebar('错题本', [
         '',
