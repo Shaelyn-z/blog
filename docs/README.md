@@ -13,7 +13,7 @@ actionLink: /basics/frond.html
   </div>
   <div class="feature">
     <h2>日常碎碎念</h2>
-    <p>家有一猪咪，她说要占C位，看她那么可爱的份上，准了</p>
+    <p>家有一猪咪，她说要站C位，看她那么可爱的份上，准了</p>
   </div>
   <div class="feature">
     <h2>随笔</h2>

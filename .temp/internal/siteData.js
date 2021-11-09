@@ -3,9 +3,17 @@
  */
 export const siteData = {
   "title": "老张の部落格",
-  "description": "Just playing around",
-  "base": "/",
-  "headTags": [],
+  "description": "Good good study ,day day up",
+  "base": "/blog/",
+  "headTags": [
+    [
+      "link",
+      {
+        "rel": "icon",
+        "href": "/blog/logo.ico"
+      }
+    ]
+  ],
   "pages": [
     {
       "title": "Home",
@@ -21,23 +29,67 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "错题本",
+      "title": "那些年踩的坑——工具类",
+      "frontmatter": {},
+      "regularPath": "/bug/tool.html",
+      "relativePath": "bug/tool.md",
+      "key": "v-7bb0d2a9",
+      "path": "/bug/tool.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Error: Could not find any Visual Studio installation to use",
+          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
+        },
+        {
+          "level": 3,
+          "title": "情景再现",
+          "slug": "情景再现"
+        },
+        {
+          "level": 3,
+          "title": "解决方案",
+          "slug": "解决方案"
+        },
+        {
+          "level": 3,
+          "title": "具体操作",
+          "slug": "具体操作"
+        },
+        {
+          "level": 3,
+          "title": "Tips",
+          "slug": "tips"
+        },
+        {
+          "level": 2,
+          "title": "nodemon热更新显示端口占用",
+          "slug": "nodemon热更新显示端口占用"
+        },
+        {
+          "level": 3,
+          "title": "解决方式",
+          "slug": "解决方式"
+        }
+      ]
+    },
+    {
+      "title": "HTTP",
       "frontmatter": {},
       "regularPath": "/bug/",
       "relativePath": "bug/README.md",
       "key": "v-371a8c24",
-      "path": "/bug/"
+      "path": "/bug/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "跨域请求方式变为 OPTIONS",
+          "slug": "跨域请求方式变为-options"
+        }
+      ]
     },
     {
-      "title": "跨域请求方式变为 OPTIONS",
-      "frontmatter": {},
-      "regularPath": "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html",
-      "relativePath": "bug/跨域请求方式变为OPTIONS.md",
-      "key": "v-3c34ea86",
-      "path": "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html"
-    },
-    {
-      "title": "JavaScript 面向对象",
+      "title": "前端",
       "frontmatter": {},
       "regularPath": "/basics/frond.html",
       "relativePath": "basics/frond.md",
@@ -46,29 +98,239 @@ export const siteData = {
       "headers": [
         {
           "level": 2,
+          "title": "前端模块化之 CommonJS 与 ES6 模块化",
+          "slug": "前端模块化之-commonjs-与-es6-模块化"
+        },
+        {
+          "level": 3,
+          "title": "为什么要使用前端模块化",
+          "slug": "为什么要使用前端模块化"
+        },
+        {
+          "level": 3,
+          "title": "什么是前端模块化",
+          "slug": "什么是前端模块化"
+        },
+        {
+          "level": 3,
+          "title": "ES6 模块化",
+          "slug": "es6-模块化"
+        },
+        {
+          "level": 3,
+          "title": "ES6 模块化的几种导出方式:",
+          "slug": "es6-模块化的几种导出方式"
+        },
+        {
+          "level": 3,
+          "title": "CommonJS",
+          "slug": "commonjs"
+        },
+        {
+          "level": 3,
+          "title": "babel",
+          "slug": "babel"
+        },
+        {
+          "level": 2,
+          "title": "JavaScript 面向对象",
+          "slug": "javascript-面向对象"
+        },
+        {
+          "level": 3,
           "title": "原型",
           "slug": "原型"
         },
         {
-          "level": 2,
+          "level": 3,
           "title": "原型链",
           "slug": "原型链"
         },
         {
-          "level": 2,
+          "level": 3,
           "title": "基于 prototype 的继承",
           "slug": "基于-prototype-的继承"
         },
         {
-          "level": 2,
+          "level": 3,
           "title": "es6 面向对象",
           "slug": "es6-面向对象"
         }
       ]
+    },
+    {
+      "title": "课外书",
+      "frontmatter": {},
+      "regularPath": "/essays/book.html",
+      "relativePath": "essays/book.md",
+      "key": "v-2af7199d",
+      "path": "/essays/book.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "《把自己当回事儿》杨天真",
+          "slug": "《把自己当回事儿》杨天真"
+        },
+        {
+          "level": 3,
+          "title": "简介",
+          "slug": "简介"
+        },
+        {
+          "level": 3,
+          "title": "摘抄",
+          "slug": "摘抄"
+        },
+        {
+          "level": 3,
+          "title": "普鲁斯特问卷",
+          "slug": "普鲁斯特问卷"
+        }
+      ]
+    },
+    {
+      "title": "小句子",
+      "frontmatter": {},
+      "regularPath": "/essays/sentence.html",
+      "relativePath": "essays/sentence.md",
+      "key": "v-5bd677dd",
+      "path": "/essays/sentence.html"
+    },
+    {
+      "title": "实用/工具类",
+      "frontmatter": {},
+      "regularPath": "/essays/toolbook.html",
+      "relativePath": "essays/toolbook.md",
+      "key": "v-5fa4209d",
+      "path": "/essays/toolbook.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "《网络是怎样连接的》[日]户根勤",
+          "slug": "《网络是怎样连接的》-日-户根勤"
+        },
+        {
+          "level": 3,
+          "title": "网络的全貌",
+          "slug": "网络的全貌"
+        },
+        {
+          "level": 2,
+          "title": "《起床后的黄金1小时》[日]池田千惠",
+          "slug": "《起床后的黄金1小时》-日-池田千惠"
+        },
+        {
+          "level": 3,
+          "title": "章节概要",
+          "slug": "章节概要"
+        },
+        {
+          "level": 3,
+          "title": "利用早起，提高工作效率",
+          "slug": "利用早起-提高工作效率"
+        },
+        {
+          "level": 3,
+          "title": "早起，遇见全新的自己",
+          "slug": "早起-遇见全新的自己"
+        },
+        {
+          "level": 3,
+          "title": "做”神奇“的事，成为出众的人",
+          "slug": "做-神奇-的事-成为出众的人"
+        },
+        {
+          "level": 3,
+          "title": "制定你的早起方案",
+          "slug": "制定你的早起方案"
+        },
+        {
+          "level": 3,
+          "title": "只要起床，就是一场胜利",
+          "slug": "只要起床-就是一场胜利"
+        }
+      ]
+    },
+    {
+      "title": "html/css",
+      "frontmatter": {},
+      "regularPath": "/fun/htmlcss.html",
+      "relativePath": "fun/htmlcss.md",
+      "key": "v-357874e3",
+      "path": "/fun/htmlcss.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "利用html热区技术监听图片点击事件",
+          "slug": "利用html热区技术监听图片点击事件"
+        },
+        {
+          "level": 3,
+          "title": "如何设置html热区？",
+          "slug": "如何设置html热区"
+        },
+        {
+          "level": 3,
+          "title": "map",
+          "slug": "map"
+        },
+        {
+          "level": 3,
+          "title": "area",
+          "slug": "area"
+        },
+        {
+          "level": 2,
+          "title": "搜索过滤和滚动定位",
+          "slug": "搜索过滤和滚动定位"
+        },
+        {
+          "level": 3,
+          "title": "实现",
+          "slug": "实现"
+        },
+        {
+          "level": 3,
+          "title": "滚动定位",
+          "slug": "滚动定位"
+        },
+        {
+          "level": 3,
+          "title": "字体闪烁",
+          "slug": "字体闪烁"
+        },
+        {
+          "level": 3,
+          "title": "搜索过滤",
+          "slug": "搜索过滤"
+        },
+        {
+          "level": 3,
+          "title": "注意",
+          "slug": "注意"
+        }
+      ]
+    },
+    {
+      "title": "嘴碎",
+      "frontmatter": {},
+      "regularPath": "/talk/",
+      "relativePath": "talk/README.md",
+      "key": "v-db133624",
+      "path": "/talk/"
+    },
+    {
+      "title": "关于外包",
+      "frontmatter": {},
+      "regularPath": "/talk/outsourcers.html",
+      "relativePath": "talk/outsourcers.md",
+      "key": "v-42dcb8fb",
+      "path": "/talk/outsourcers.html"
     }
   ],
   "themeConfig": {
     "search": true,
+    "displayAllHeaders": true,
     "nav": [
       {
         "text": "基本功",
@@ -76,12 +338,94 @@ export const siteData = {
       },
       {
         "text": "错题本",
-        "link": "/bug/跨域请求方式变为OPTIONS.html"
+        "link": "/bug/"
+      },
+      {
+        "text": "有趣的功能",
+        "link": "/fun/htmlcss.html"
+      },
+      {
+        "text": "碎碎念",
+        "link": "/talk/"
+      },
+      {
+        "text": "随笔",
+        "items": [
+          {
+            "text": "读书笔记",
+            "items": [
+              {
+                "text": "实用类",
+                "link": "/essays/toolbook.html"
+              },
+              {
+                "text": "课外书",
+                "link": "/essays/book.html"
+              }
+            ]
+          },
+          {
+            "text": "小句子",
+            "link": "/essays/sentence.html"
+          }
+        ]
       }
     ],
-    "sidebar": [
-      "/basics/frond.html",
-      "/bug/"
-    ]
+    "sidebar": {
+      "/basics/": [
+        {
+          "title": "基本功",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            "frond"
+          ]
+        }
+      ],
+      "/bug/": [
+        {
+          "title": "错题本",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            "",
+            "tool"
+          ]
+        }
+      ],
+      "/fun/": [
+        {
+          "title": "有趣的功能",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            "htmlcss"
+          ]
+        }
+      ],
+      "/talk/": [
+        {
+          "title": "碎碎念",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            "",
+            "outsourcers"
+          ]
+        }
+      ],
+      "/essays/": [
+        {
+          "title": "随笔",
+          "collapsable": false,
+          "sidebarDepth": 2,
+          "children": [
+            "toolbook",
+            "book",
+            "sentence"
+          ]
+        }
+      ]
+    }
   }
 }

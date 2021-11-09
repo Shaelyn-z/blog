@@ -7,9 +7,9 @@
   "author": "shaelyn",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress build docs",
-    "deploy-gh": "GH=1 yarn docs:build && bash scripts/deploy-gh.sh"
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
+    "deploy-gh": "yarn docs:build && bash scripts/deploy-gh.sh"
   },
   "devDependencies": {
     "vuepress": "^1.8.2"
