@@ -8,14 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "错题本",
-      "frontmatter": {},
-      "regularPath": "/bug/",
-      "relativePath": "bug/README.md",
-      "key": "v-371a8c24",
-      "path": "/bug/"
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -27,6 +19,22 @@ export const siteData = {
       "relativePath": "README.md",
       "key": "v-3a110e4b",
       "path": "/"
+    },
+    {
+      "title": "错题本",
+      "frontmatter": {},
+      "regularPath": "/bug/",
+      "relativePath": "bug/README.md",
+      "key": "v-371a8c24",
+      "path": "/bug/"
+    },
+    {
+      "title": "跨域请求方式变为 OPTIONS",
+      "frontmatter": {},
+      "regularPath": "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html",
+      "relativePath": "bug/跨域请求方式变为OPTIONS.md",
+      "key": "v-3c34ea86",
+      "path": "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html"
     },
     {
       "title": "JavaScript 面向对象",
@@ -57,14 +65,6 @@ export const siteData = {
           "slug": "es6-面向对象"
         }
       ]
-    },
-    {
-      "title": "跨域请求方式变为 OPTIONS",
-      "frontmatter": {},
-      "regularPath": "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html",
-      "relativePath": "bug/跨域请求方式变为OPTIONS.md",
-      "key": "v-3c34ea86",
-      "path": "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html"
     }
   ],
   "themeConfig": {

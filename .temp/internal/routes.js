@@ -9,18 +9,6 @@ import GlobalLayout from "D:\\code\\shaelynblog.github.io\\node_modules\\@vuepre
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-371a8c24",
-    path: "/bug/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-371a8c24").then(next)
-    },
-  },
-  {
-    path: "/bug/index.html",
-    redirect: "/bug/"
-  },
-  {
     name: "v-3a110e4b",
     path: "/",
     component: GlobalLayout,
@@ -33,12 +21,16 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-1a9390ab",
-    path: "/basics/frond.html",
+    name: "v-371a8c24",
+    path: "/bug/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-371a8c24").then(next)
     },
+  },
+  {
+    path: "/bug/index.html",
+    redirect: "/bug/"
   },
   {
     name: "v-3c34ea86",
@@ -55,6 +47,14 @@ export const routes = [
   {
     path: "/bug/跨域请求方式变为OPTIONS.html",
     redirect: "/bug/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAOPTIONS.html"
+  },
+  {
+    name: "v-1a9390ab",
+    path: "/basics/frond.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
+    },
   },
   {
     path: '*',
