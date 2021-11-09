@@ -1,7 +1,4 @@
 node_modules
 
-# vuepress temp file
-.temp
-
-# 构建打包文件
 docs/.vuepress/dist
+
