@@ -1,6 +1,5 @@
 module.exports = {
   base: '/blog/',
-  dest: '../../',
   title: '老张の部落格',
   description: 'Good good study ,day day up',
   head: [

@@ -21,11 +21,11 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-7bb0d2a9",
-    path: "/bug/tool.html",
+    name: "v-1a9390ab",
+    path: "/basics/frond.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7bb0d2a9").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
     },
   },
   {
@@ -41,19 +41,11 @@ export const routes = [
     redirect: "/bug/"
   },
   {
-    name: "v-1a9390ab",
-    path: "/basics/frond.html",
+    name: "v-7bb0d2a9",
+    path: "/bug/tool.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
-    },
-  },
-  {
-    name: "v-2af7199d",
-    path: "/essays/book.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2af7199d").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-7bb0d2a9").then(next)
     },
   },
   {
@@ -62,6 +54,14 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-5bd677dd").then(next)
+    },
+  },
+  {
+    name: "v-2af7199d",
+    path: "/essays/book.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-2af7199d").then(next)
     },
   },
   {
@@ -81,6 +81,14 @@ export const routes = [
     },
   },
   {
+    name: "v-42dcb8fb",
+    path: "/talk/outsourcers.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-42dcb8fb").then(next)
+    },
+  },
+  {
     name: "v-db133624",
     path: "/talk/",
     component: GlobalLayout,
@@ -91,14 +99,6 @@ export const routes = [
   {
     path: "/talk/index.html",
     redirect: "/talk/"
-  },
-  {
-    name: "v-42dcb8fb",
-    path: "/talk/outsourcers.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-42dcb8fb").then(next)
-    },
   },
   {
     path: '*',
