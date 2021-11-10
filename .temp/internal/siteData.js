@@ -29,21 +29,6 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "HTTP",
-      "frontmatter": {},
-      "regularPath": "/bug/",
-      "relativePath": "bug/README.md",
-      "key": "v-371a8c24",
-      "path": "/bug/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "跨域请求方式变为 OPTIONS",
-          "slug": "跨域请求方式变为-options"
-        }
-      ]
-    },
-    {
       "title": "浅谈web安全",
       "frontmatter": {},
       "regularPath": "/basics/websecure.html",
@@ -90,51 +75,6 @@ export const siteData = {
           "level": 3,
           "title": "总结",
           "slug": "总结"
-        }
-      ]
-    },
-    {
-      "title": "那些年踩的坑——工具类",
-      "frontmatter": {},
-      "regularPath": "/bug/tool.html",
-      "relativePath": "bug/tool.md",
-      "key": "v-7bb0d2a9",
-      "path": "/bug/tool.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Error: Could not find any Visual Studio installation to use",
-          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
-        },
-        {
-          "level": 3,
-          "title": "情景再现",
-          "slug": "情景再现"
-        },
-        {
-          "level": 3,
-          "title": "解决方案",
-          "slug": "解决方案"
-        },
-        {
-          "level": 3,
-          "title": "具体操作",
-          "slug": "具体操作"
-        },
-        {
-          "level": 3,
-          "title": "Tips",
-          "slug": "tips"
-        },
-        {
-          "level": 2,
-          "title": "nodemon热更新显示端口占用",
-          "slug": "nodemon热更新显示端口占用"
-        },
-        {
-          "level": 3,
-          "title": "解决方式",
-          "slug": "解决方式"
         }
       ]
     },
@@ -205,6 +145,76 @@ export const siteData = {
           "level": 3,
           "title": "es6 面向对象",
           "slug": "es6-面向对象"
+        },
+        {
+          "level": 2,
+          "title": "js类型判断",
+          "slug": "js类型判断"
+        },
+        {
+          "level": 3,
+          "title": "typeof",
+          "slug": "typeof"
+        },
+        {
+          "level": 3,
+          "title": "instanceof",
+          "slug": "instanceof"
+        },
+        {
+          "level": 3,
+          "title": "Object.prototype.toString.call",
+          "slug": "object-prototype-tostring-call"
+        },
+        {
+          "level": 2,
+          "title": "跨域解决方案",
+          "slug": "跨域解决方案"
+        },
+        {
+          "level": 3,
+          "title": "跨域",
+          "slug": "跨域"
+        },
+        {
+          "level": 3,
+          "title": "服务端设置cors头",
+          "slug": "服务端设置cors头"
+        },
+        {
+          "level": 3,
+          "title": "webpack中提供devserver",
+          "slug": "webpack中提供devserver"
+        },
+        {
+          "level": 3,
+          "title": "node-http-proxy 模块",
+          "slug": "node-http-proxy-模块"
+        },
+        {
+          "level": 3,
+          "title": "使用nginx代理转发",
+          "slug": "使用nginx代理转发"
+        },
+        {
+          "level": 3,
+          "title": "JSONP",
+          "slug": "jsonp"
+        }
+      ]
+    },
+    {
+      "title": "HTTP",
+      "frontmatter": {},
+      "regularPath": "/bug/",
+      "relativePath": "bug/README.md",
+      "key": "v-371a8c24",
+      "path": "/bug/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "跨域请求方式变为 OPTIONS",
+          "slug": "跨域请求方式变为-options"
         }
       ]
     },
@@ -235,6 +245,51 @@ export const siteData = {
           "level": 3,
           "title": "普鲁斯特问卷",
           "slug": "普鲁斯特问卷"
+        }
+      ]
+    },
+    {
+      "title": "那些年踩的坑——工具类",
+      "frontmatter": {},
+      "regularPath": "/bug/tool.html",
+      "relativePath": "bug/tool.md",
+      "key": "v-7bb0d2a9",
+      "path": "/bug/tool.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Error: Could not find any Visual Studio installation to use",
+          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
+        },
+        {
+          "level": 3,
+          "title": "情景再现",
+          "slug": "情景再现"
+        },
+        {
+          "level": 3,
+          "title": "解决方案",
+          "slug": "解决方案"
+        },
+        {
+          "level": 3,
+          "title": "具体操作",
+          "slug": "具体操作"
+        },
+        {
+          "level": 3,
+          "title": "Tips",
+          "slug": "tips"
+        },
+        {
+          "level": 2,
+          "title": "nodemon热更新显示端口占用",
+          "slug": "nodemon热更新显示端口占用"
+        },
+        {
+          "level": 3,
+          "title": "解决方式",
+          "slug": "解决方式"
         }
       ]
     },
@@ -362,20 +417,20 @@ export const siteData = {
       ]
     },
     {
-      "title": "嘴碎",
-      "frontmatter": {},
-      "regularPath": "/talk/",
-      "relativePath": "talk/README.md",
-      "key": "v-db133624",
-      "path": "/talk/"
-    },
-    {
       "title": "关于外包",
       "frontmatter": {},
       "regularPath": "/talk/outsourcers.html",
       "relativePath": "talk/outsourcers.md",
       "key": "v-42dcb8fb",
       "path": "/talk/outsourcers.html"
+    },
+    {
+      "title": "嘴碎",
+      "frontmatter": {},
+      "regularPath": "/talk/",
+      "relativePath": "talk/README.md",
+      "key": "v-db133624",
+      "path": "/talk/"
     }
   ],
   "themeConfig": {
@@ -426,7 +481,7 @@ export const siteData = {
         {
           "title": "基本功",
           "collapsable": false,
-          "sidebarDepth": 2,
+          "sidebarDepth": 1,
           "children": [
             "frond",
             "websecure"
@@ -437,7 +492,7 @@ export const siteData = {
         {
           "title": "错题本",
           "collapsable": false,
-          "sidebarDepth": 2,
+          "sidebarDepth": 1,
           "children": [
             "",
             "tool"
@@ -448,7 +503,7 @@ export const siteData = {
         {
           "title": "有趣的功能",
           "collapsable": false,
-          "sidebarDepth": 2,
+          "sidebarDepth": 1,
           "children": [
             "htmlcss"
           ]
@@ -458,7 +513,7 @@ export const siteData = {
         {
           "title": "碎碎念",
           "collapsable": false,
-          "sidebarDepth": 2,
+          "sidebarDepth": 1,
           "children": [
             "",
             "outsourcers"
@@ -469,7 +524,7 @@ export const siteData = {
         {
           "title": "随笔",
           "collapsable": false,
-          "sidebarDepth": 2,
+          "sidebarDepth": 1,
           "children": [
             "toolbook",
             "book",

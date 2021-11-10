@@ -126,7 +126,12 @@ math.add(1);
 
 ### babel
 
-nodejs 不支持 es6 模块化规范,但可以使用第三方工具解决
+**Babel 是一个 JavaScript 编译器, 让我们可以在旧浏览器中使用 ES6+**
+
+官方解释:
+> Babel 是一个工具链，主要用于将采用 ECMAScript 2015+ 语法编写的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中
+
+nodejs 不支持 es6 模块化规范,但可以使用第三方工具babel解决
 
 1. 在任意目录下执行，全局安装 `babel-cli` 和 `browserify`： npm install babel-cli browserify -g
 
@@ -319,7 +324,7 @@ console.log(page.toStr());
 
 真的是~~~
 
-![](./img/basics-frond-7.png)
+![](./img/basics-frond-7.jpg)
 
 另外想要提一下`extends`关键字:
 
@@ -335,3 +340,165 @@ class Son extends Parent {
 ```
 
 这样一来, 看着友好简洁多了,可以说和一般后端的面向对象写法都大同小异了...
+
+## js类型判断
+
+### typeof
+
+* typeof可以用来识别一些基本类型: boolean,number,undefined,string,symbol
+
+* 会把null、array、object统一归为object类型
+
+* ```jsx
+  console.log(typeof function(){});//可以识别出function
+  ```
+
+### instanceof
+
+检测是否在原型链上
+
+* 一般用来检测对象类型，以及继承关系。
+
+* 检测引用类型, 基本数据类型检测不了
+
+  ```javascript
+  console.log(num instanceof Number);// false  因为Number是引用类型
+  ```
+
+
+
+### Object.prototype.toString.call
+
+可以相对较全的判断js的数据类型
+
+```javascript
+Object.prototype.toString.call(bool);//[object Boolean]
+Object.prototype.toString.call(null);       // => "[object Null]"
+Object.prototype.toString.call(undefined);  // => "[object Undefined]"
+```
+
+原理:
+
+**`Symbol.toStringTag`**
+
+*  是一个内置 symbol，它通常作为对象的属性键使用，对应的属性值应该为字符串类型。
+* Object.prototype.toString()方法会去读取这个标签并把它包含在自己的返回值里。
+
+* 许多内置的 JavaScript 对象类型即便没有 `toStringTag` 属性，也能被 `toString()` 方法识别并返回特定的类型标签, 是因为引擎为它们设置好了 `toStringTag` 标签
+
+* 自己创建的对象没有`toStringTag` 属性，需要自定义标签内容
+
+  ```javascript
+  class ValidatorClass {
+    get [Symbol.toStringTag]() {
+      return "Validator";
+    }
+  }
+  
+  Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
+  ```
+
+  ## 跨域解决方案
+
+### 跨域
+
+出于网络安全考虑, 浏览器有同源策略限制, 即同ip,端口,协议, 如果访问对象有其中一项不匹配, 那么该请求在浏览器中属于跨域, 默认会报错
+
+### 服务端设置cors头
+
+以上说了jsonp的缺点是只可以处理get请求,  但是同源策略是浏览器的安全机制, nodejs并不会有这种限制, 那么我们可以通过设置http请求头来允许跨域请求
+
+```
+Access-Control-Allow-Origin : 域名:端口
+```
+
+
+
+### webpack中提供`devserver`
+
+`vue.config.js`同样可以这么使用
+
+```javascript
+mmodule.exports = {
+  //...
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  }
+};
+```
+
+当请求到/api/xxx时, 会代理到http://localhost:3000/api/xxx
+
+
+
+### node-http-proxy 模块
+
+devServer实现代理的核心原理就是使用了node-http-proxy 模块
+
+
+
+
+
+### 使用nginx代理转发
+
+```
+server{
+  listen 80;
+  server_name  tomcat.shaochenfeng.com;
+  index  index.php index.html index.htm;
+
+  location / {
+    proxy_pass  http://127.0.0.1:8080; # 转发规则
+    proxy_set_header Host $proxy_host; # 修改转发请求头，让8080端口的应用可以受到真实的请求
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
+```
+
+访问 [http://tomcat.shaochenfeng.com](https://link.zhihu.com/?target=http%3A//tomcat.shaochenfeng.com) 时就会转发到本地的 8080 端口
+
+### JSONP
+
+原理: 利用了script标签不受同源策略限制的特点, 将调用函数写在src中, 后端将数据通过参数传入到该函数给前端调用
+
+**大致实现**
+
+1.创建script标签, 函数名为callback, 并且写下callback拿到数据要处理的逻辑
+
+```js
+<script src="http://localhost:8080?callback=xxx"></script>
+
+function callback(data){
+   //业务逻辑...
+}
+```
+
+2.服务端 response将data传到callback中
+
+```javascript
+var http = require('http');
+var urllib = require('url');
+
+var port = 8080;
+var data = {'data':'world'};
+
+http.createServer(function(req,res){
+    var params = urllib.parse(req.url,true);
+    if(params.query.callback){
+        console.log(params.query.callback);
+        //jsonp
+        var str = params.query.callback + '(' + JSON.stringify(data) + ')';
+        res.end(str);
+    } else {
+        res.end();
+    }
+    
+}).listen(port,function(){
+    console.log('jsonp server is on');
+});
+```
+
+缺陷: 只能处理get请求的跨域

@@ -27,28 +27,46 @@ module.exports = {
 
     ],
     sidebar: {
-      '/basics/': getSidebar('基本功', [
-        'frond',
-        'websecure'
-      ]),
-      '/bug/': getSidebar('错题本', [
-        '',
-        'tool'
-      ]),
-      '/fun/': getSidebar('有趣的功能', [
-        'htmlcss'
-      ]),
-      '/talk/': getSidebar('碎碎念', [
-        '',
-        'outsourcers'
-      ]),
-      '/essays/': getSidebar('随笔', [
-        'toolbook',
-        'book',
-        'sentence'
-      ])
+      '/basics/': getSidebar({
+        title: '基本功', children: [
+          'frond',
+          'websecure'
+        ]
+      }),
+      '/bug/': getSidebar({
+        title: '错题本', children: [
+          '',
+          'tool'
+        ]
+      }),
+      '/fun/': getSidebar({
+        title: '有趣的功能', children: [
+          'htmlcss'
+        ]
+      }),
+      '/talk/': getSidebar({
+        title: '碎碎念', children: [
+          '',
+          'outsourcers'
+        ]
+      }),
+      '/essays/': getSidebar({
+        title: '随笔', children: [
+          'toolbook',
+          'book',
+          'sentence'
+        ],
+        sidebarDepth: 1
+      })
     }
-  }
+  },
+  plugins: [
+    ['@vuepress/back-to-top', true],
+    ['@vuepress/active-header-links', {
+      sidebarLinkSelector: '.sidebar-link',
+      headerAnchorSelector: '.header-anchor'
+    }]
+  ]
 }
 
 /**
@@ -57,12 +75,12 @@ module.exports = {
  * @param {*} children 侧边栏子路径数组
  * @returns 
  */
-function getSidebar(title, children) {
+function getSidebar({ title, children, sidebarDepth = 1 }) {
   return [
     {
       title,
       collapsable: false,
-      sidebarDepth: 2,
+      sidebarDepth,
       children
     }
   ]

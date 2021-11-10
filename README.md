@@ -7,6 +7,8 @@
 1. npm install 安装依赖
 2. npm run dev 启动项目
 
-## 打包
-npm run build
+npm run build 项目构建
+
+
+
 

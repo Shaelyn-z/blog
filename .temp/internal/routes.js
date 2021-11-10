@@ -21,6 +21,22 @@ export const routes = [
     redirect: "/"
   },
   {
+    name: "v-a685ad72",
+    path: "/basics/websecure.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-a685ad72").then(next)
+    },
+  },
+  {
+    name: "v-1a9390ab",
+    path: "/basics/frond.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
+    },
+  },
+  {
     name: "v-371a8c24",
     path: "/bug/",
     component: GlobalLayout,
@@ -33,11 +49,11 @@ export const routes = [
     redirect: "/bug/"
   },
   {
-    name: "v-a685ad72",
-    path: "/basics/websecure.html",
+    name: "v-2af7199d",
+    path: "/essays/book.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-a685ad72").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-2af7199d").then(next)
     },
   },
   {
@@ -46,22 +62,6 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-7bb0d2a9").then(next)
-    },
-  },
-  {
-    name: "v-1a9390ab",
-    path: "/basics/frond.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
-    },
-  },
-  {
-    name: "v-2af7199d",
-    path: "/essays/book.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2af7199d").then(next)
     },
   },
   {
@@ -89,6 +89,14 @@ export const routes = [
     },
   },
   {
+    name: "v-42dcb8fb",
+    path: "/talk/outsourcers.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-42dcb8fb").then(next)
+    },
+  },
+  {
     name: "v-db133624",
     path: "/talk/",
     component: GlobalLayout,
@@ -99,14 +107,6 @@ export const routes = [
   {
     path: "/talk/index.html",
     redirect: "/talk/"
-  },
-  {
-    name: "v-42dcb8fb",
-    path: "/talk/outsourcers.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-42dcb8fb").then(next)
-    },
   },
   {
     path: '*',
