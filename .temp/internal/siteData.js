@@ -16,56 +16,6 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "浅谈web安全",
-      "frontmatter": {},
-      "regularPath": "/basics/websecure.html",
-      "relativePath": "basics/websecure.md",
-      "key": "v-a685ad72",
-      "path": "/basics/websecure.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "常见的web安全问题",
-          "slug": "常见的web安全问题"
-        },
-        {
-          "level": 3,
-          "title": "越权",
-          "slug": "越权"
-        },
-        {
-          "level": 3,
-          "title": "跨域漏洞",
-          "slug": "跨域漏洞"
-        },
-        {
-          "level": 3,
-          "title": "注入风险",
-          "slug": "注入风险"
-        },
-        {
-          "level": 3,
-          "title": "xss跨站脚本攻击",
-          "slug": "xss跨站脚本攻击"
-        },
-        {
-          "level": 3,
-          "title": "csrf跨站请求伪造",
-          "slug": "csrf跨站请求伪造"
-        },
-        {
-          "level": 3,
-          "title": "前端安全",
-          "slug": "前端安全"
-        },
-        {
-          "level": 3,
-          "title": "总结",
-          "slug": "总结"
-        }
-      ]
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -77,21 +27,6 @@ export const siteData = {
       "relativePath": "README.md",
       "key": "v-3a110e4b",
       "path": "/"
-    },
-    {
-      "title": "HTTP",
-      "frontmatter": {},
-      "regularPath": "/bug/",
-      "relativePath": "bug/README.md",
-      "key": "v-371a8c24",
-      "path": "/bug/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "跨域请求方式变为 OPTIONS",
-          "slug": "跨域请求方式变为-options"
-        }
-      ]
     },
     {
       "title": "前端",
@@ -164,6 +99,71 @@ export const siteData = {
       ]
     },
     {
+      "title": "浅谈web安全",
+      "frontmatter": {},
+      "regularPath": "/basics/websecure.html",
+      "relativePath": "basics/websecure.md",
+      "key": "v-a685ad72",
+      "path": "/basics/websecure.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "常见的web安全问题",
+          "slug": "常见的web安全问题"
+        },
+        {
+          "level": 3,
+          "title": "越权",
+          "slug": "越权"
+        },
+        {
+          "level": 3,
+          "title": "跨域漏洞",
+          "slug": "跨域漏洞"
+        },
+        {
+          "level": 3,
+          "title": "注入风险",
+          "slug": "注入风险"
+        },
+        {
+          "level": 3,
+          "title": "xss跨站脚本攻击",
+          "slug": "xss跨站脚本攻击"
+        },
+        {
+          "level": 3,
+          "title": "csrf跨站请求伪造",
+          "slug": "csrf跨站请求伪造"
+        },
+        {
+          "level": 3,
+          "title": "前端安全",
+          "slug": "前端安全"
+        },
+        {
+          "level": 3,
+          "title": "总结",
+          "slug": "总结"
+        }
+      ]
+    },
+    {
+      "title": "HTTP",
+      "frontmatter": {},
+      "regularPath": "/bug/",
+      "relativePath": "bug/README.md",
+      "key": "v-371a8c24",
+      "path": "/bug/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "跨域请求方式变为 OPTIONS",
+          "slug": "跨域请求方式变为-options"
+        }
+      ]
+    },
+    {
       "title": "那些年踩的坑——工具类",
       "frontmatter": {},
       "regularPath": "/bug/tool.html",
@@ -209,14 +209,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "小句子",
-      "frontmatter": {},
-      "regularPath": "/essays/sentence.html",
-      "relativePath": "essays/sentence.md",
-      "key": "v-5bd677dd",
-      "path": "/essays/sentence.html"
-    },
-    {
       "title": "课外书",
       "frontmatter": {},
       "regularPath": "/essays/book.html",
@@ -245,6 +237,14 @@ export const siteData = {
           "slug": "普鲁斯特问卷"
         }
       ]
+    },
+    {
+      "title": "小句子",
+      "frontmatter": {},
+      "regularPath": "/essays/sentence.html",
+      "relativePath": "essays/sentence.md",
+      "key": "v-5bd677dd",
+      "path": "/essays/sentence.html"
     },
     {
       "title": "实用/工具类",
@@ -300,22 +300,6 @@ export const siteData = {
           "slug": "只要起床-就是一场胜利"
         }
       ]
-    },
-    {
-      "title": "关于外包",
-      "frontmatter": {},
-      "regularPath": "/talk/outsourcers.html",
-      "relativePath": "talk/outsourcers.md",
-      "key": "v-42dcb8fb",
-      "path": "/talk/outsourcers.html"
-    },
-    {
-      "title": "嘴碎",
-      "frontmatter": {},
-      "regularPath": "/talk/",
-      "relativePath": "talk/README.md",
-      "key": "v-db133624",
-      "path": "/talk/"
     },
     {
       "title": "html/css",
@@ -376,6 +360,22 @@ export const siteData = {
           "slug": "注意"
         }
       ]
+    },
+    {
+      "title": "嘴碎",
+      "frontmatter": {},
+      "regularPath": "/talk/",
+      "relativePath": "talk/README.md",
+      "key": "v-db133624",
+      "path": "/talk/"
+    },
+    {
+      "title": "关于外包",
+      "frontmatter": {},
+      "regularPath": "/talk/outsourcers.html",
+      "relativePath": "talk/outsourcers.md",
+      "key": "v-42dcb8fb",
+      "path": "/talk/outsourcers.html"
     }
   ],
   "themeConfig": {

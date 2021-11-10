@@ -94,7 +94,7 @@ const allowDomains = ["http://域名1", "http://域名2", "http://域名3"]
 
 **安全性未知，是否继续**
 这也是在产品设计角度对csrf漏洞防御手段之一，将用户往更安全的行为上引导，可能会有风险。
-![]((/docsimg/basics-websecure-2.png))
+![]((../docsimg/basics-websecure-2.png))
 
 
 ### 前端安全

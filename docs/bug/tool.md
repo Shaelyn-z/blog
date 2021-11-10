@@ -4,7 +4,7 @@
 
 ### 情景再现
 
-![](/docsimg/bug-tool-1.png)
+![](../docsimg/bug-tool-1.png)
 
 ### 解决方案
 
@@ -21,8 +21,8 @@ gyp ERR! find VS https://github.com/nodejs/node-gyp#on-windows
 
 ### 具体操作
 
-![](/docsimg/bug-tool-2.png)
-![](/docsimg/bug-tool-3.png)
+![](../docsimg/bug-tool-2.png)
+![](../docsimg/bug-tool-3.png)
 
 方案 2: 可以试下全局安装构建工具
 

@@ -53,16 +53,16 @@ console.log(obj, name, age);
 1. 不能直接在 index.html 右键浏览器打开,会报以下错误
    解决方案:这里可以使用 vscode 中的 Live 插件,使用服务器的访问 index.html
 
-   ![](/docsimg/basics-frond-8.png)
+   ![](../docsimg/basics-frond-8.png)
 
 2. 浏览器默认不支持模块化
    解决方案:在引入的 script 标签声明 type="module"
 
-   ![](/docsimg/basics-frond-9.png)
+   ![](../docsimg/basics-frond-9.png)
 
 这些问题解决后,就能看到引入数据成功啦~
 
-![](/docsimg/basics-frond-10.png)
+![](../docsimg/basics-frond-10.png)
 
 ### ES6 模块化的几种导出方式:
 
@@ -319,7 +319,7 @@ console.log(page.toStr());
 
 真的是~~~
 
-![](/docsimg/basics-frond-7.png)
+![](../docsimg/basics-frond-7.png)
 
 另外想要提一下`extends`关键字:
 
