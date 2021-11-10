@@ -8,7 +8,7 @@
 ### 越权
 越权顾名思义就是越过自身权限，可操作本不属于自己权限范围内的功能。
 越权也是日常开发中容易出现的安全漏洞。
-![越权.jpg](/docsimg/basics-websecure-1.jpg)
+![越权.jpg](./img/basics-websecure-1.jpg)
 
 * 横向越权
 同一级别权限, 可以访问其他用户数据。
@@ -94,7 +94,7 @@ const allowDomains = ["http://域名1", "http://域名2", "http://域名3"]
 
 **安全性未知，是否继续**
 这也是在产品设计角度对csrf漏洞防御手段之一，将用户往更安全的行为上引导，可能会有风险。
-![]((../docsimg/basics-websecure-2.png))
+![](./img/basics-websecure-2.png)
 
 
 ### 前端安全

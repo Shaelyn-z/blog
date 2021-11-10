@@ -53,16 +53,16 @@ console.log(obj, name, age);
 1. 不能直接在 index.html 右键浏览器打开,会报以下错误
    解决方案:这里可以使用 vscode 中的 Live 插件,使用服务器的访问 index.html
 
-   ![](../docsimg/basics-frond-8.png)
+   ![](./img/basics-frond-8.png)
 
 2. 浏览器默认不支持模块化
    解决方案:在引入的 script 标签声明 type="module"
 
-   ![](../docsimg/basics-frond-9.png)
+   ![](./img/basics-frond-9.png)
 
 这些问题解决后,就能看到引入数据成功啦~
 
-![](../docsimg/basics-frond-10.png)
+![](./img/basics-frond-10.png)
 
 ### ES6 模块化的几种导出方式:
 
@@ -167,7 +167,7 @@ let obj = new Person(1);
 console.dir(Person);
 ```
 
-![打印的Person函数](/docsimg/basics-frond-1.png)
+![打印的Person函数](./img/basics-frond-1.png)
 
 - 原型上也有一个`constructor`属性, 指向构造函数
   _打印 Person 的原型_
@@ -176,7 +176,7 @@ console.dir(Person);
 console.dir(Person.prototype);
 ```
 
-![Person的原型](/docsimg/basics-frond-2.png)
+![Person的原型](./img/basics-frond-2.png)
 以上可以得出结论:
 
 ```js
@@ -185,7 +185,7 @@ console.log(Person.prototype.constructor === Person);
 ```
 
 - 用函数创建出来的实例对象,有个`proto`属性(在多数浏览器中我们调试看到的是`__proto__`), 又指向了该函数的原型
-  ![打印的obj对象](/docsimg/basics-frond-3.png)
+  ![打印的obj对象](./img/basics-frond-3.png)
   所以, `obj`的`__proto__`指向了`Person`的原型对象
 
 ```js
@@ -195,7 +195,7 @@ console.log(obj.__proto__ === Person.prototype);
 
 > 这么一看, `实例`, `prototype`, `__proto__`的关系是不是就出来了?
 
-![实例, prototype, __proto__的关系.jpg](/docsimg/basics-frond-4.jpg)
+![实例, prototype, __proto__的关系.jpg](./img/basics-frond-4.jpg)
 
 ### 原型链
 
@@ -220,7 +220,7 @@ let lucy = new Lucy(2);
 console.dir(lucy);
 ```
 
-![打印的lucy实例](/docsimg/basics-frond-5.png)
+![打印的lucy实例](./img/basics-frond-5.png)
 由此图可以得出结论:
 
 ```js
@@ -234,7 +234,7 @@ console.log(lucy.__proto__.__proto__.__proto__ === Object.prototype);
 
 > 这么一看, 是不是原型链的关系就出来了?
 
-![原型链.jpg](/docsimg/basics-frond-6.jpg)
+![原型链.jpg](./img/basics-frond-6.jpg)
 
 ### 基于 prototype 的继承
 
@@ -319,7 +319,7 @@ console.log(page.toStr());
 
 真的是~~~
 
-![](../docsimg/basics-frond-7.png)
+![](./img/basics-frond-7.png)
 
 另外想要提一下`extends`关键字:
 

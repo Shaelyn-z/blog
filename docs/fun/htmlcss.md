@@ -4,7 +4,7 @@
 
 #### 需求
 通过监听点击**图片**的某个范围绑定事件。
-![](/docsimg/fun-htmlcss-1.gif)
+![](./fun-htmlcss-1.gif)
 
 ### 如何设置html热区？
 利用img结合map和area标签锁定热区
@@ -76,7 +76,7 @@ https://tooltt.com/img-coord/
 ## 搜索过滤和滚动定位
 
 #### 来看效果
-![](/docsimg/fun-htmlcss-2.gif)
+![](./fun-htmlcss-2.gif)
 
 ### 实现
  html
@@ -166,7 +166,7 @@ ps:
 ```
 ### 注意
 当改变table内容的时候, 这个max-height会动态变化, 重置时要把这个maxHeight根据页面处理一下, 不然内容会显示不全
-![](/docsimg/fun-htmlcss-3.png)
+![](./fun-htmlcss-3.png)
 用@input事件监测输入内容为空时, 恢复所有项的显示
 ``` js
       //输入内容为空

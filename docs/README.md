@@ -3,7 +3,7 @@ home: true
 heroImage: /cat.jpg
 actionText: 走着 →
 actionLink: /basics/frond.html
-# footer: ...
+# footer: 持续更新中...
 ---
 
 <div class="features">

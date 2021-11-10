@@ -21,22 +21,6 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-1a9390ab",
-    path: "/basics/frond.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
-    },
-  },
-  {
-    name: "v-a685ad72",
-    path: "/basics/websecure.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-a685ad72").then(next)
-    },
-  },
-  {
     name: "v-371a8c24",
     path: "/bug/",
     component: GlobalLayout,
@@ -49,11 +33,27 @@ export const routes = [
     redirect: "/bug/"
   },
   {
+    name: "v-a685ad72",
+    path: "/basics/websecure.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-a685ad72").then(next)
+    },
+  },
+  {
     name: "v-7bb0d2a9",
     path: "/bug/tool.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-7bb0d2a9").then(next)
+    },
+  },
+  {
+    name: "v-1a9390ab",
+    path: "/basics/frond.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1a9390ab").then(next)
     },
   },
   {
