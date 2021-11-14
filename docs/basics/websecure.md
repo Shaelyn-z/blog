@@ -97,7 +97,7 @@ const allowDomains = ["http://域名1", "http://域名2", "http://域名3"]
 ![](./img/basics-websecure-2.png)
 
 
-### 前端安全
+## 前端安全
 
 1. vue.config.js {`productionSourceMap` : boolean }
 SourceMap即**资源地图**，默认为true, 开启后能够方便通过控制台打印信息定位到源代码所在文件。
@@ -110,7 +110,7 @@ SourceMap即**资源地图**，默认为true, 开启后能够方便通过控制�
 4. 服务端对每个接口每次访问都要验证好登录态
 
 
-### 总结
+## 总结
 开发设计在安全角度上要注意的事：
 * token/AK/SK等秘钥不要明文写在代码里, 可用环境变量, 系统变量最好加salt处理。
 * 注意打印的信息, 敏感信息应该脱敏处理或者加密。
