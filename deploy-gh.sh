@@ -15,7 +15,7 @@ cd docs/.vuepress/dist
 git init
 git checkout -b gh-pages
 git add -A
-git commit -m 'shell 提交test'
+git commit -m 'GitHub Page提交'
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
