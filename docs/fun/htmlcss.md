@@ -180,3 +180,144 @@ ps:
         }
       }
 ```
+
+## 关于iframe
+话说, 写这篇文章的起源于一个需求。
+需要在一个表格内悬浮到某一个单元格时候展示一个内嵌页面悬浮框, 
+另外, 这个内嵌页面是只展示局部内容(嵌入的页面只展示中间一部分)...
+
+大概长这样子: (求生欲强, 打码比较多, 差不多懂这个意思就行...)
+![](./fun-htmlcss-4.png)
+
+
+鼠标移动到**查看**位置展示弹框, 弹框内是内嵌的第三方系统页面，
+
+期间关于使用iframe碰到了好些问题, 在此记录一下。
+
+### 关于iframe的HTML标准
+贴一下MDN: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe
+开始认为iframe提供了相关的属性可以实现这个需求需要的效果, 后来发现网上很多说使用`vspace` 和 `hspace`来控制内容间距, 根本没有效果。查看资料发现有说HTML5 中`iframe`对于`vspace` 和 `hspace`属性已经弃用了的, 也有说从来没有在web规范中提供过这两个属性,  不过的确我看到一些官方性质的文档, 都查不到这两个属性, 多是从别人博客看到这种用法, 或许这是非标准属性吧。
+
+### 如何使用iframe展示局部页面内容?
+经过网上冲浪发现了**轶哥**的帖实现过这种效果, 这里借鉴了他的idea: https://www.wyr.me/post/641
+其中整个实现思路巧妙的地方在于使用了一个单独的html文件介质
+1. 创建**iframe.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>轶哥</title>
+</head>
+
+<body>
+  <iframe src="https://www.wyr.me/" frameborder="0" scrolling="no"
+    style="position: absolute;top: -190px;left: -40px;height: 405px; width: 1024px;"></iframe>
+</body>
+
+</html>
+```
+![](./fun-htmlcss-5.png)
+
+
+使用绝对定位并设置好偏移量, 
+这里偏移量可以根据自身需要展示的内容做调整
+
+2.内嵌iframe.html, 设置好目标需要的宽高
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>轶哥</title>
+</head>
+
+<body style="background-color: #888">
+  <iframe src="iframe.html" frameborder="0" scrolling="no"
+    style="position: absolute;top: 0px;left: 0px;height: 182px; width: 215px;"></iframe>
+</body>
+
+</html>
+```
+![](./fun-htmlcss-6.png)
+
+### 跨域的iframe获取iframe内的dom元素
+* 不知道有没有小伙伴操作过iframe内的dom元素呢, 怎么获取呢?
+我们可以通过iframe的element中`contentWindow `属性获取到iframe的**window**对象。
+ 它的属性像全局Window 一样是可以操作的。
+```js
+  let iframeBox = document.getElementsByTagName("iframe")[0].contentWindow;
+ iframeBox.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+```
+* 但有一点要注意，以上获取dom的方式，必须要在iframe同域的情况下使用
+![](./fun-htmlcss-7.png)
+
+### ElementUI el-table的fixed固定列引发的bug
+在技术实现方案有了之后，实际运用到项目中发现每次hover触发，同一个iframe请求会发起多次：
+![](./fun-htmlcss-8.png)
+
+经过定位, 发现是因为表格有两列使用了ElementUI el-table的fixed属性。
+来看看elementUI源码对fixed做了什么处理：
+1. 找到fixed入口
+```js
+    fixed(newVal) {
+      if (this.columnConfig) {
+        this.columnConfig.fixed = newVal;
+        this.owner.store.scheduleLayout(true);
+      }
+    },
+```
+2.调用了scheduleLayout
+```js
+    // 更新 DOM
+    scheduleLayout(needUpdateColumns) {
+      if (needUpdateColumns) {
+        this.updateColumns();
+      }
+      this.table.debouncedUpdateLayout();
+    },
+
+```
+3. updateColumns更新列
+4. debouncedUpdateLayout防抖更新布局
+
+##DOM的变化会导致iframe重新加载
+以上排查过程可以发现, 由于dom重排导致了dom树重新计算引发的问题。
+
+#### dom重绘重排
+
+##### 重排（回流）
+重排发生的根本原理就是元素的几何属性发生了改变。如：
+* 添加或删除可见的DOM元素
+* 元素位置改变
+* 元素本身的尺寸发生改变
+* 内容改变
+* 页面渲染器初始化
+* 浏览器窗口大小发生改变
+
+**重排在性能上会有更大开销，日常对dom操作应该集中处理，一次性渲染**
+从优化角度，我们可以使用`文档片段`批量操作dom
+因为文档片段存在于内存中，并不在DOM树中，所以将子元素插入到文档片段时不会引起页面
+使用方式：
+```js
+var element  = document.getElementById('ul'); // html里有个id为ul的ul标签
+var fragment = document.createDocumentFragment();//创建文档片段
+var browsers = ['Firefox', 'Chrome', 'Opera',
+    'Safari', 'Internet Explorer'];
+//批量dom节点处理
+browsers.forEach(function(browser) {
+    var li = document.createElement('li');
+    li.textContent = browser;
+    fragment.appendChild(li);
+});
+//最后一次将文档片段添加到目标dom节点里
+element.appendChild(fragment);
+```
+
+##### 重绘
+当一个元素的外观发生改变，但没有改变布局, 重新把元素外观绘制出来的过程，叫做重绘。
+比如我们常见的color、border-style、background等
