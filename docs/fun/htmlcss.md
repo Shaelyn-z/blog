@@ -4,7 +4,7 @@
 
 #### 需求
 通过监听点击**图片**的某个范围绑定事件。
-![](./fun-htmlcss-1.gif)
+![](./img/fun-htmlcss-1.gif)
 
 ### 如何设置html热区？
 利用img结合map和area标签锁定热区
@@ -76,7 +76,7 @@ https://tooltt.com/img-coord/
 ## 搜索过滤和滚动定位
 
 #### 来看效果
-![](./fun-htmlcss-2.gif)
+![](./img/fun-htmlcss-2.gif)
 
 ### 实现
  html
@@ -166,7 +166,7 @@ ps:
 ```
 ### 注意
 当改变table内容的时候, 这个max-height会动态变化, 重置时要把这个maxHeight根据页面处理一下, 不然内容会显示不全
-![](./fun-htmlcss-3.png)
+![](./img/fun-htmlcss-3.png)
 用@input事件监测输入内容为空时, 恢复所有项的显示
 ``` js
       //输入内容为空
@@ -187,7 +187,7 @@ ps:
 另外, 这个内嵌页面是只展示局部内容(嵌入的页面只展示中间一部分)...
 
 大概长这样子: (求生欲强, 打码比较多, 差不多懂这个意思就行...)
-![](./fun-htmlcss-4.png)
+![](./img/fun-htmlcss-4.png)
 
 
 鼠标移动到**查看**位置展示弹框, 弹框内是内嵌的第三方系统页面，
@@ -219,7 +219,7 @@ ps:
 
 </html>
 ```
-![](./fun-htmlcss-5.png)
+![](./img/fun-htmlcss-5.png)
 
 
 使用绝对定位并设置好偏移量, 
@@ -243,7 +243,7 @@ ps:
 
 </html>
 ```
-![](./fun-htmlcss-6.png)
+![](./img/fun-htmlcss-6.png)
 
 ### 跨域的iframe获取iframe内的dom元素
 * 不知道有没有小伙伴操作过iframe内的dom元素呢, 怎么获取呢?
@@ -254,11 +254,11 @@ ps:
  iframeBox.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
 ```
 * 但有一点要注意，以上获取dom的方式，必须要在iframe同域的情况下使用
-![](./fun-htmlcss-7.png)
+![](./img/fun-htmlcss-7.png)
 
 ### ElementUI el-table的fixed固定列引发的bug
 在技术实现方案有了之后，实际运用到项目中发现每次hover触发，同一个iframe请求会发起多次：
-![](./fun-htmlcss-8.png)
+![](./img/fun-htmlcss-8.png)
 
 经过定位, 发现是因为表格有两列使用了ElementUI el-table的fixed属性。
 来看看elementUI源码对fixed做了什么处理：

@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   base: '/blog/',
   title: '老张の部落格',
@@ -5,6 +6,9 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
+  alias: {
+    'styles': path.resolve(__dirname, './styles')
+  },
   themeConfig: {
     search: true,
     displayAllHeaders: true, // 显示所有页面的标题链接
@@ -12,7 +16,7 @@ module.exports = {
       // { text: '首页', link: '/' },
       { text: '基本功', link: '/basics/frond.html' },
       { text: '错题本', link: '/bug/' },
-      { text: '有趣的功能', link: '/fun/htmlcss.html' },
+      { text: '有点儿意思', link: '/fun/htmlcss.html' },
       { text: '碎碎念', link: '/talk/' },
       {
         text: '随笔',
@@ -40,8 +44,9 @@ module.exports = {
         ]
       }),
       '/fun/': getSidebar({
-        title: '有趣的功能', children: [
-          'htmlcss'
+        title: '有点儿意思', children: [
+          'htmlcss',
+          'navLink'
         ]
       }),
       '/talk/': getSidebar({

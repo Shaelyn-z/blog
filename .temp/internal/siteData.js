@@ -16,17 +16,19 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroImage": "/cat.jpg",
-        "actionText": "走着 →",
-        "actionLink": "/basics/frond.html"
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-3a110e4b",
-      "path": "/"
+      "title": "HTTP",
+      "frontmatter": {},
+      "regularPath": "/bug/",
+      "relativePath": "bug/README.md",
+      "key": "v-371a8c24",
+      "path": "/bug/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "跨域请求方式变为 OPTIONS",
+          "slug": "跨域请求方式变为-options"
+        }
+      ]
     },
     {
       "title": "浅谈web安全",
@@ -77,6 +79,19 @@ export const siteData = {
           "slug": "总结"
         }
       ]
+    },
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroImage": "/cat.jpg",
+        "actionText": "走着 →",
+        "actionLink": "/basics/frond.html"
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-3a110e4b",
+      "path": "/"
     },
     {
       "title": "前端",
@@ -204,21 +219,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "HTTP",
-      "frontmatter": {},
-      "regularPath": "/bug/",
-      "relativePath": "bug/README.md",
-      "key": "v-371a8c24",
-      "path": "/bug/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "跨域请求方式变为 OPTIONS",
-          "slug": "跨域请求方式变为-options"
-        }
-      ]
-    },
-    {
       "title": "课外书",
       "frontmatter": {},
       "regularPath": "/essays/book.html",
@@ -245,61 +245,6 @@ export const siteData = {
           "level": 3,
           "title": "普鲁斯特问卷",
           "slug": "普鲁斯特问卷"
-        }
-      ]
-    },
-    {
-      "title": "那些年踩的坑——工具类",
-      "frontmatter": {},
-      "regularPath": "/bug/tool.html",
-      "relativePath": "bug/tool.md",
-      "key": "v-7bb0d2a9",
-      "path": "/bug/tool.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Error: Could not find any Visual Studio installation to use",
-          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
-        },
-        {
-          "level": 3,
-          "title": "情景再现",
-          "slug": "情景再现"
-        },
-        {
-          "level": 3,
-          "title": "解决方案",
-          "slug": "解决方案"
-        },
-        {
-          "level": 3,
-          "title": "具体操作",
-          "slug": "具体操作"
-        },
-        {
-          "level": 3,
-          "title": "Tips",
-          "slug": "tips"
-        },
-        {
-          "level": 2,
-          "title": "nodemon热更新显示端口占用",
-          "slug": "nodemon热更新显示端口占用"
-        },
-        {
-          "level": 3,
-          "title": "解决方式",
-          "slug": "解决方式"
-        },
-        {
-          "level": 2,
-          "title": "vscode 远程同步插件SFTP使用指引",
-          "slug": "vscode-远程同步插件sftp使用指引"
-        },
-        {
-          "level": 3,
-          "title": "vscode 向远程云开发机同步代码",
-          "slug": "vscode-向远程云开发机同步代码"
         }
       ]
     },
@@ -452,6 +397,61 @@ export const siteData = {
       ]
     },
     {
+      "title": "那些年踩的坑——工具类",
+      "frontmatter": {},
+      "regularPath": "/bug/tool.html",
+      "relativePath": "bug/tool.md",
+      "key": "v-7bb0d2a9",
+      "path": "/bug/tool.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Error: Could not find any Visual Studio installation to use",
+          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
+        },
+        {
+          "level": 3,
+          "title": "情景再现",
+          "slug": "情景再现"
+        },
+        {
+          "level": 3,
+          "title": "解决方案",
+          "slug": "解决方案"
+        },
+        {
+          "level": 3,
+          "title": "具体操作",
+          "slug": "具体操作"
+        },
+        {
+          "level": 3,
+          "title": "Tips",
+          "slug": "tips"
+        },
+        {
+          "level": 2,
+          "title": "nodemon热更新显示端口占用",
+          "slug": "nodemon热更新显示端口占用"
+        },
+        {
+          "level": 3,
+          "title": "解决方式",
+          "slug": "解决方式"
+        },
+        {
+          "level": 2,
+          "title": "vscode 远程同步插件SFTP使用指引",
+          "slug": "vscode-远程同步插件sftp使用指引"
+        },
+        {
+          "level": 3,
+          "title": "vscode 向远程云开发机同步代码",
+          "slug": "vscode-向远程云开发机同步代码"
+        }
+      ]
+    },
+    {
       "title": "嘴碎",
       "frontmatter": {},
       "regularPath": "/talk/",
@@ -518,6 +518,21 @@ export const siteData = {
           "slug": "致谢"
         }
       ]
+    },
+    {
+      "title": "mark住先",
+      "frontmatter": {},
+      "regularPath": "/fun/navLink.html",
+      "relativePath": "fun/navLink.md",
+      "key": "v-6046b8fa",
+      "path": "/fun/navLink.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "素材",
+          "slug": "素材"
+        }
+      ]
     }
   ],
   "themeConfig": {
@@ -533,7 +548,7 @@ export const siteData = {
         "link": "/bug/"
       },
       {
-        "text": "有趣的功能",
+        "text": "有点儿意思",
         "link": "/fun/htmlcss.html"
       },
       {
@@ -588,11 +603,12 @@ export const siteData = {
       ],
       "/fun/": [
         {
-          "title": "有趣的功能",
+          "title": "有点儿意思",
           "collapsable": false,
           "sidebarDepth": 1,
           "children": [
-            "htmlcss"
+            "htmlcss",
+            "navLink"
           ]
         }
       ],
