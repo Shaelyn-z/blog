@@ -15,5 +15,8 @@
     "@vuepress/plugin-active-header-links": "^1.8.2",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "fsevents": "^1.2.13"
   }
 }

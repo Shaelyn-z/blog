@@ -4,38 +4,36 @@
 export const siteData = {
   "title": "老张の部落格",
   "description": "Good good study ,day day up",
-  "base": "/blog/",
+  "base": "./",
   "headTags": [
     [
       "link",
       {
         "rel": "icon",
-        "href": "/blog/logo.ico"
+        "href": "./logo.ico"
       }
     ]
   ],
   "pages": [
     {
-      "title": "HTTP",
-      "frontmatter": {},
-      "regularPath": "/bug/",
-      "relativePath": "bug/README.md",
-      "key": "v-371a8c24",
-      "path": "/bug/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "跨域请求方式变为 OPTIONS",
-          "slug": "跨域请求方式变为-options"
-        }
-      ]
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroImage": "/cat.jpg",
+        "actionText": "走着 →",
+        "actionLink": "/basics/frond.html"
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-b02f3244",
+      "path": "/"
     },
     {
       "title": "浅谈web安全",
       "frontmatter": {},
       "regularPath": "/basics/websecure.html",
       "relativePath": "basics/websecure.md",
-      "key": "v-a685ad72",
+      "key": "v-0daf7e54",
       "path": "/basics/websecure.html",
       "headers": [
         {
@@ -81,24 +79,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroImage": "/cat.jpg",
-        "actionText": "走着 →",
-        "actionLink": "/basics/frond.html"
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-3a110e4b",
-      "path": "/"
-    },
-    {
       "title": "前端",
       "frontmatter": {},
       "regularPath": "/basics/frond.html",
       "relativePath": "basics/frond.md",
-      "key": "v-1a9390ab",
+      "key": "v-48de42b8",
       "path": "/basics/frond.html",
       "headers": [
         {
@@ -223,7 +208,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/essays/book.html",
       "relativePath": "essays/book.md",
-      "key": "v-2af7199d",
+      "key": "v-5f1e2a2c",
       "path": "/essays/book.html",
       "headers": [
         {
@@ -249,19 +234,89 @@ export const siteData = {
       ]
     },
     {
+      "title": "HTTP",
+      "frontmatter": {},
+      "regularPath": "/bug/",
+      "relativePath": "bug/README.md",
+      "key": "v-34bdcf81",
+      "path": "/bug/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "跨域请求方式变为 OPTIONS",
+          "slug": "跨域请求方式变为-options"
+        }
+      ]
+    },
+    {
       "title": "小句子",
       "frontmatter": {},
       "regularPath": "/essays/sentence.html",
       "relativePath": "essays/sentence.md",
-      "key": "v-5bd677dd",
+      "key": "v-20f6a7ac",
       "path": "/essays/sentence.html"
+    },
+    {
+      "title": "那些年踩的坑——工具类",
+      "frontmatter": {},
+      "regularPath": "/bug/tool.html",
+      "relativePath": "bug/tool.md",
+      "key": "v-7000e1b6",
+      "path": "/bug/tool.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Error: Could not find any Visual Studio installation to use",
+          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
+        },
+        {
+          "level": 3,
+          "title": "情景再现",
+          "slug": "情景再现"
+        },
+        {
+          "level": 3,
+          "title": "解决方案",
+          "slug": "解决方案"
+        },
+        {
+          "level": 3,
+          "title": "具体操作",
+          "slug": "具体操作"
+        },
+        {
+          "level": 3,
+          "title": "Tips",
+          "slug": "tips"
+        },
+        {
+          "level": 2,
+          "title": "nodemon热更新显示端口占用",
+          "slug": "nodemon热更新显示端口占用"
+        },
+        {
+          "level": 3,
+          "title": "解决方式",
+          "slug": "解决方式"
+        },
+        {
+          "level": 2,
+          "title": "vscode 远程同步插件SFTP使用指引",
+          "slug": "vscode-远程同步插件sftp使用指引"
+        },
+        {
+          "level": 3,
+          "title": "vscode 向远程云开发机同步代码",
+          "slug": "vscode-向远程云开发机同步代码"
+        }
+      ]
     },
     {
       "title": "实用/工具类",
       "frontmatter": {},
       "regularPath": "/essays/toolbook.html",
       "relativePath": "essays/toolbook.md",
-      "key": "v-5fa4209d",
+      "key": "v-195b562c",
       "path": "/essays/toolbook.html",
       "headers": [
         {
@@ -316,7 +371,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/fun/htmlcss.html",
       "relativePath": "fun/htmlcss.md",
-      "key": "v-357874e3",
+      "key": "v-4a1b73a0",
       "path": "/fun/htmlcss.html",
       "headers": [
         {
@@ -397,57 +452,17 @@ export const siteData = {
       ]
     },
     {
-      "title": "那些年踩的坑——工具类",
+      "title": "mark住先",
       "frontmatter": {},
-      "regularPath": "/bug/tool.html",
-      "relativePath": "bug/tool.md",
-      "key": "v-7bb0d2a9",
-      "path": "/bug/tool.html",
+      "regularPath": "/fun/navLink.html",
+      "relativePath": "fun/navLink.md",
+      "key": "v-755674d0",
+      "path": "/fun/navLink.html",
       "headers": [
         {
           "level": 2,
-          "title": "Error: Could not find any Visual Studio installation to use",
-          "slug": "error-could-not-find-any-visual-studio-installation-to-use"
-        },
-        {
-          "level": 3,
-          "title": "情景再现",
-          "slug": "情景再现"
-        },
-        {
-          "level": 3,
-          "title": "解决方案",
-          "slug": "解决方案"
-        },
-        {
-          "level": 3,
-          "title": "具体操作",
-          "slug": "具体操作"
-        },
-        {
-          "level": 3,
-          "title": "Tips",
-          "slug": "tips"
-        },
-        {
-          "level": 2,
-          "title": "nodemon热更新显示端口占用",
-          "slug": "nodemon热更新显示端口占用"
-        },
-        {
-          "level": 3,
-          "title": "解决方式",
-          "slug": "解决方式"
-        },
-        {
-          "level": 2,
-          "title": "vscode 远程同步插件SFTP使用指引",
-          "slug": "vscode-远程同步插件sftp使用指引"
-        },
-        {
-          "level": 3,
-          "title": "vscode 向远程云开发机同步代码",
-          "slug": "vscode-向远程云开发机同步代码"
+          "title": "素材",
+          "slug": "素材"
         }
       ]
     },
@@ -456,7 +471,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/talk/",
       "relativePath": "talk/README.md",
-      "key": "v-db133624",
+      "key": "v-075b3c7e",
       "path": "/talk/"
     },
     {
@@ -464,7 +479,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/talk/outsourcers.html",
       "relativePath": "talk/outsourcers.md",
-      "key": "v-42dcb8fb",
+      "key": "v-b861e3f0",
       "path": "/talk/outsourcers.html",
       "headers": [
         {
@@ -516,21 +531,6 @@ export const siteData = {
           "level": 2,
           "title": "致谢",
           "slug": "致谢"
-        }
-      ]
-    },
-    {
-      "title": "mark住先",
-      "frontmatter": {},
-      "regularPath": "/fun/navLink.html",
-      "relativePath": "fun/navLink.md",
-      "key": "v-6046b8fa",
-      "path": "/fun/navLink.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "素材",
-          "slug": "素材"
         }
       ]
     }

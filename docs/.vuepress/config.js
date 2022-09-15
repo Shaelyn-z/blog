@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  base: '/blog/',
+  base: './',
   title: '老张の部落格',
   description: 'Good good study ,day day up',
   head: [
